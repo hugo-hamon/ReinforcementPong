@@ -1,0 +1,39 @@
+[user]
+left_paddle_algorithm = "ball_chaser"
+right_paddle_algorithm = "human"
+menu_enable = true
+
+[graphics]
+graphic_enable = true
+width = 1000
+height = 1000
+fps = 120
+title = "Pong"
+countdown_enable = true
+
+[game]
+max_score = 10
+paddle_width = 10
+paddle_height = 100
+paddle_speed = 5
+ball_radius = 10
+ball_speed = 3
+ball_speed_increase_ratio = 1.03
+ball_speed_max = 10
+
+[item]
+item_enable = true
+item_spawn_rate = 0.001
+max_item = 1
+item_duration = 1000
+
+[ball_chaser]
+ball_chaser_tolerance_ratio = 0.2
+
+[neat]
+train_enable = false
+restore_enable = false
+config_path = "config/neat_config.txt"
+restore_path = "model/neat/checkpoint-0"
+play_path = "model/neat/8i_item_mode_model"
+max_generations = 50
