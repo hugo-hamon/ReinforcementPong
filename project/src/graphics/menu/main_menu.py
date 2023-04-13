@@ -1,5 +1,6 @@
 from __future__ import annotations
 from .config_menu import ConfigMenu
+from .credit_menu import CreditMenu
 from typing import TYPE_CHECKING
 from .box import Box
 import pygame as pg
@@ -34,6 +35,7 @@ class MainMenu:
                                      self.screen.get_height() * 0.67))
 
         self.config_menu = ConfigMenu(self.screen, graphic_game)
+        self.credit_menu = CreditMenu(self.screen, graphic_game)
 
     def run(self):
         running = True
@@ -48,6 +50,8 @@ class MainMenu:
                         running = False
                     if self.config_button.is_collide(mx, my):
                         self.config_menu.run()
+                    if self.credit_button.is_collide(mx, my):
+                        self.credit_menu.run()
 
             # Update the screen
             self.screen.fill((0, 0, 0))

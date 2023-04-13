@@ -33,6 +33,10 @@ class GraphicGame(Game):
         self.text_font = pg.font.SysFont("Arial", TEXT_FONT_SIZE)
         self.countdown_font = pg.font.SysFont("Arial", COUNTDOWN_FONT_SIZE)
 
+        # load icon
+        icon = pg.image.load(self.config.graphics.icon_path)
+        pg.display.set_icon(icon)
+
         self.running = False
 
         self.main_menu = MainMenu(self.screen, self)

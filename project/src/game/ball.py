@@ -1,7 +1,6 @@
 from typing import List, Tuple
 from ..config import Config
 from .paddle import Paddle
-import logging
 import random
 import math
 
@@ -24,8 +23,9 @@ class Ball:
 
     def move(self) -> None:
         """Move the ball"""
-        self.x = max(0, min(self.x + self.velocity_x * self.speed, self.config.graphics.width))
-        self.y = max(0, min(self.y + self.velocity_y * self.speed, self.config.graphics.height))
+        radius = self.config.game.ball_radius
+        self.x = max(radius, min(self.x + self.velocity_x * self.speed, self.config.graphics.width - radius))
+        self.y = max(radius, min(self.y + self.velocity_y * self.speed, self.config.graphics.height - radius))
 
     def manage_collision(self) -> bool:
         """Check if the ball collide with the paddle"""

@@ -14,6 +14,7 @@ class NeatManager(Manager):
         self.config = config
         self.paddle_name = paddle_name
         model = self.load_model()
+
         neat_config = neat.Config(
             neat.DefaultGenome, neat.DefaultReproduction,
             neat.DefaultSpeciesSet, neat.DefaultStagnation,
@@ -24,6 +25,7 @@ class NeatManager(Manager):
     def get_move(self, game: Game) -> Direction:
         """Return a direction play by the user"""
         paddle_id = 0 if self.paddle_name == "paddle1" else 1
+        
         return choose_move(game, paddle_id, self.net)
     
     def load_model(self):

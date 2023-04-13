@@ -10,6 +10,7 @@ height = 720
 fps = 120
 title = "Pong"
 countdown_enable = false
+icon_path = "asset/images/menu/icon.jpg"
 
 [game]
 max_score = 10

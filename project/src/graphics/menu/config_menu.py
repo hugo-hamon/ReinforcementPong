@@ -205,6 +205,10 @@ class ConfigMenu:
                 20, self.game.config.game.paddle_speed)
         elif arrow_box_name == "Item enable":
             self.game.config.item.item_enable = not self.game.config.item.item_enable
+            new_manager = match_manager(self.game.config, self.game.config.user.left_paddle_algorithm, "paddle1")
+            self.game.control_func["paddle1"] = new_manager.get_move
+            new_manager = match_manager(self.game.config, self.game.config.user.right_paddle_algorithm, "paddle2")
+            self.game.control_func["paddle2"] = new_manager.get_move
         elif arrow_box_name == "Item duration":
             self.game.config.item.item_duration += value * 1000
             self.game.config.item.item_duration = max(

@@ -5,11 +5,12 @@ menu_enable = true
 
 [graphics]
 graphic_enable = true
-width = 1000
-height = 1000
+width = 720
+height = 720
 fps = 120
 title = "Pong"
 countdown_enable = true
+icon_path = "asset/images/menu/icon.jpg"
 
 [game]
 max_score = 10

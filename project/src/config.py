@@ -18,6 +18,7 @@ class Graphics:
     fps: int
     title: str
     countdown_enable: bool
+    icon_path: str
 
 
 @dataclass

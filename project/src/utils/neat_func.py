@@ -37,7 +37,7 @@ def get_6_input(game: Game, paddle_id: int) -> Tuple[float, float, float, float,
     return (paddle_y, distance, ball_y, other_paddle_y, velocity_x, velocity_y)
 
 def get_8_input_item_mode(game: Game, paddle_id: int) -> Tuple[float, float, float, float, float, float, float, float]:
-    """Return the input for a given genome with 6 inputs"""
+    """Return the input for a given genome with 8 inputs"""
     paddle_x, paddle_y = game.get_paddles()[paddle_id].get_position()
     paddle_height = game.get_paddles()[paddle_id].paddle_height
     other_paddle_height = game.get_paddles()[0 if paddle_id == 1 else 1].paddle_height

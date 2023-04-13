@@ -10,6 +10,7 @@ height = 720
 fps = 120
 title = "Pong"
 countdown_enable = false
+icon_path = "asset/images/menu/icon.jpg"
 
 [game]
 max_score = 10
@@ -18,7 +19,7 @@ paddle_height = 100
 paddle_speed = 5
 ball_radius = 10
 ball_speed = 5
-ball_speed_increase_ratio = 1.02
+ball_speed_increase_ratio = 1.05
 ball_speed_max = 10
 
 [item]
