@@ -37,7 +37,7 @@ python3 -m venv venv
 .\venv\Scripts\activate
 ```
 
-4. Installez les dépendances nécessaires à l'aide de `requirements.txt` :
+3. Installez les dépendances nécessaires à l'aide de `requirements.txt` :
 ```bash
 pip install -r requirements.txt
 ```
